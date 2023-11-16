@@ -37,3 +37,4 @@ docs/doxygen
 compile_commands.json
 build/
 *.swp
+**/generated-includes/

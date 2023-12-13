@@ -1,3 +1,14 @@
+# 交叉编译为 arm 架构程序
+if (ARM64)
+    set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/../../toolchain-arm64.cmake)
+    # 总是 Release 版本
+    set(CMAKE_BUILD_TYPE Release)
+else()
+    # 指定编译器选项
+    # 为了 gdb 调试，不优化、带上debug符号
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g -rdynamic")
+endif()
+
 cmake_minimum_required(VERSION 3.10)
 
 # detect if Catch is being bundled,

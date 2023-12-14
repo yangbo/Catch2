@@ -36,6 +36,7 @@ docs/doxygen
 *.cache
 compile_commands.json
 build/
+build_debug/
 *.swp
 **/generated-includes/
 build-arm64/

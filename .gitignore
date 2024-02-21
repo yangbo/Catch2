@@ -40,3 +40,4 @@ build_debug/
 *.swp
 **/generated-includes/
 build-arm64/
+build-*/
